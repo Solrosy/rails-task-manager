@@ -1,0 +1,22 @@
+<div class="container w-75">
+  <h1>All my tasks</h1>
+  <ul class="list-group">
+    <% @tasks.each do |task| %>
+    <li class="list-group-item ">
+      <input class="form-check-input mx-2" type="checkbox"
+      <% if task.completed %>
+      <%= "checked" %>
+      <% end %>
+      >
+      <%= link_to task.title, task_path(task), class: "text-decoration-none" %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="border-top my-3">
+    <div class="my-3">
+      <%= link_to tasks_new_path do %>
+        <i class="fa-solid fa-plus"></i> Add task
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container w-75">
+  <h1>Create a new task</h1>
+  <%= form_with model: @task do |f| %>
+  <%= f.label :title, class: "form-label" %>
+  <%= f.text_field :title, class: "form-control" %>
+  <%= f.label :details, class: "form-label" %>
+  <%= f.text_area :details, class: "form-control" %>
+  <%= f.submit class: "btn btn-primary mt-3" %>
+  <% end %>
+  <div class="border-top my-3">
+    <div class="my-3">
+      <%= link_to tasks_path do %>
+        <i class="fa-regular fa-hand-point-left"></i> Back to list
+      <% end %>
+    </div>
+  </div>
+</div>

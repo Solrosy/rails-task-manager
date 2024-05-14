@@ -64,3 +64,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# fontawesome
+gem "font-awesome-sass"
+
+gem "sassc-rails"

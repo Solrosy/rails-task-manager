@@ -1,0 +1,21 @@
+<div class="container w-75">
+  <div class="navbar">
+    <div class="h1"><%= @task.title %></div>
+      <div class="btn btn-outline-darkmy-2 border">
+      <%= link_to edit_path do %>
+        <i class="fa-regular fa-edit"></i> Edit this task
+      <% end %>
+    </div>
+  </div>
+  <div class="card text-bg-light mb-3 p-3">
+    <h6><%= @task.details %></h6>
+  </div>
+  <div> Completed: <%= @task.completed %></div>
+  <div class="border-top my-3">
+    <div class="my-3">
+      <%= link_to tasks_path do %>
+        <i class="fa-regular fa-hand-point-left"></i> Back to list
+      <% end %>
+    </div>
+  </div>
+</div>
